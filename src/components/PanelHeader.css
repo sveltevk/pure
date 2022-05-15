@@ -1,0 +1,64 @@
+header {
+  display: flex;
+  position: sticky;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 10;
+
+  align-items: center;
+  white-space: nowrap;
+  height: var(--panelheader_height);
+  background: var(--vkui--color_header_background);
+  padding: 0 var(--vkui--size_base_padding_horizontal--regular);
+  font-size: 23px;
+  font-family: var(--font-display);
+}
+
+main header {
+  position: fixed;
+}
+
+/* REGULAR */
+@media (min-width: 768px) {
+  header {
+    margin-block-end: 16px;
+  }
+  /* Широкая подложка */
+  body > header::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: var(--vkui--color_header_background);
+    height: var(--panelheader_height);
+  }
+}
+
+/* COMPACT */
+@media (max-width: 767px) {
+  /* Separator */
+  header::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: var(--vkui--size_base_padding_horizontal--regular);
+    right: var(--vkui--size_base_padding_horizontal--regular);
+    height: 1px;
+    background: var(--separator_common);
+    transform-origin: center top;
+  }
+}
+
+/* Хак для определения Сафари на iOS https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-touch-callout */
+@supports (-webkit-touch-callout: none) {
+  header {
+    justify-content: space-evenly;
+    font-size: 21px;
+  }
+}

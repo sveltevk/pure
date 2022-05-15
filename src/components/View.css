@@ -1,0 +1,72 @@
+article {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* COMPACT */
+@media (max-width: 767px) {
+  article {
+    background-color: var(--vkui--color_background_content);
+  }
+}
+
+article[id],
+article:target ~ article {
+  display: none;
+}
+
+article:target,
+article[aria-expanded="true"] {
+  display: block;
+}
+
+/* COMPACT */
+/* @media (max-width: 767px) {
+  article[id],
+  article:target ~ article {
+    animation: vkui-animation-view-block 0.28s var(--android-easing);
+  }
+
+  article:not(:target) ~ article,
+  article:target {
+    animation: vkui-animation-view-next-forward 0.3s var(--android-easing);
+  }
+}
+
+@keyframes vkui-animation-view-next-forward {
+  from {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  to {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vkui-animation-view-block {
+  from {
+    height: auto;
+    overflow: inherit;
+    z-index: -1;
+  }
+
+  to {
+    height: auto;
+    overflow: inherit;
+    z-index: -1;
+  }
+} */

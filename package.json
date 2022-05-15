@@ -1,0 +1,35 @@
+{
+  "name": "@sveltevk/pure",
+  "version": "0.0.1",
+  "author": "Daniil Suvorov (https://github.com/SevereCloud)",
+  "repository": "github:sveltevk/pure",
+  "homepage": "https://sveltevk.github.io/pure/",
+  "bugs": "https://github.com/sveltevk/pure/issues",
+  "license": "MIT",
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "postcss": "^8.4.13",
+    "postcss-cli": "^9.1.0",
+    "postcss-csso": "^6.0.0",
+    "postcss-import": "^14.1.0",
+    "postcss-variable-compress": "^1.1.0",
+    "postcss-dropunusedvars": "^1.2.1",
+    "size-limit": "^7.0.8"
+  },
+  "scripts": {
+    "build": "postcss src/index.css -o src/index.min.css",
+    "size": "yarn build && size-limit"
+  },
+  "size-limit": [
+    {
+      "name": "CSS",
+      "path": "src/index.min.css"
+    }
+  ],
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

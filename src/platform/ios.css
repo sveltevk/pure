@@ -1,0 +1,9 @@
+/* Хак для определения Сафари на iOS https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-touch-callout */
+@supports (-webkit-touch-callout: none) {
+  :root {
+    --vkui--size_border_radius--regular: 10px;
+    --vkui--size_card_border_radius--regular: 10px;
+    --vkui--size_base_padding_horizontal--regular: 12px;
+    --panelheader_height: 52px;
+  }
+}

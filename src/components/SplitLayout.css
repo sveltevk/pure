@@ -1,0 +1,32 @@
+main {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+main > aside {
+  min-width: 230px;
+  margin: 0;
+}
+main > article {
+  width: 100%;
+}
+
+/* REGULAR */
+@media (min-width: 768px) {
+  main > aside + article {
+    margin-left: var(--vkui--size_base_padding_horizontal--regular);
+    margin-right: var(--vkui--size_base_padding_horizontal--regular);
+  }
+}
+
+/* COMPACT */
+@media (max-width: 767px) {
+  main {
+    flex-direction: column;
+  }
+  aside {
+    display: none;
+  }
+}

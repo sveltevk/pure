@@ -1,0 +1,23 @@
+h1 {
+  font-size: var(--vkui--font_title1--font_size--regular);
+  line-height: var(--vkui--font_title1--line_height--regular);
+  font-weight: var(--vkui--font_title1--font_weight--regular);
+  margin: 18px 0 6px;
+}
+
+h2 {
+  font-size: var(--vkui--font_title2--font_size--regular);
+  line-height: var(--vkui--font_title2--line_height--regular);
+  font-weight: var(--vkui--font_title2--font_weight--regular);
+  margin: 12px 0 8px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--vkui--font_title3--font_size--regular);
+  line-height: var(--vkui--font_title3--line_height--regular);
+  font-weight: var(--vkui--font_title3--font_weight--regular);
+  margin: 14px 0 10px;
+}

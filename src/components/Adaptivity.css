@@ -1,0 +1,13 @@
+/* COMPACT */
+@media (max-width: 767px) {
+  *[only-regular] {
+    display: none;
+  }
+}
+
+/* REGULAR */
+@media (min-width: 768px) {
+  *[only-compact] {
+    display: none;
+  }
+}

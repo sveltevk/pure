@@ -1,0 +1,27 @@
+html {
+  color-scheme: var(--vkui--colors_scheme);
+  accent-color: var(--vkui--color_background_accent);
+}
+
+body {
+  margin: 0;
+  padding: var(--safe-area-inset-top) var(--safe-area-inset-right)
+    var(--safe-area-inset-bottom) var(--safe-area-inset-left);
+  height: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  color: var(--vkui--color_text_primary);
+  font-family: var(--vkui--font_family_base);
+  overflow-x: hidden;
+  background: var(--vkui--color_background);
+  position: relative;
+  z-index: 0;
+}
+
+/* COMPACT */
+@media (max-width: 767px) {
+  body {
+    background-color: var(--vkui--color_background_content);
+  }
+}

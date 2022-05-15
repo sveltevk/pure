@@ -1,0 +1,25 @@
+/* Сброс стилей */
+hr {
+  margin: 0;
+  border: none;
+}
+
+hr {
+  height: 1px;
+  background: currentColor;
+  transform-origin: center top;
+  color: var(--separator_common);
+  margin: 0 var(--vkui--size_base_padding_horizontal--regular);
+}
+
+@media (min-resolution: 2dppx) {
+  hr {
+    transform: scaleY(0.5);
+  }
+}
+
+@media (min-resolution: 3dppx) {
+  hr {
+    transform: scaleY(0.32);
+  }
+}

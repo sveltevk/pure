@@ -1,0 +1,12 @@
+a {
+  color: var(--vkui--color_text_accent);
+  text-decoration: none;
+  border: 0;
+  background: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: inherit;
+  display: inline;
+  border-radius: 0;
+}
