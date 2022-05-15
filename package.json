@@ -1,6 +1,6 @@
 {
   "name": "@sveltevk/pure",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Daniil Suvorov (https://github.com/SevereCloud)",
   "repository": "github:sveltevk/pure",
   "homepage": "https://sveltevk.github.io/pure/",
@@ -11,9 +11,9 @@
     "postcss": "^8.4.13",
     "postcss-cli": "^9.1.0",
     "postcss-csso": "^6.0.0",
+    "postcss-dropunusedvars": "^1.2.1",
     "postcss-import": "^14.1.0",
     "postcss-variable-compress": "^1.1.0",
-    "postcss-dropunusedvars": "^1.2.1",
     "size-limit": "^7.0.8"
   },
   "scripts": {
