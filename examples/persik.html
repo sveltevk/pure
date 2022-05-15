@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/@sveltevk/pure/src/index.min.css" crossorigin="anonymous">
+  <title>@sveltevk/pure</title>
+  <style>
+    .Persik {
+      display: block;
+      width: 30%;
+      max-width: 240px;
+      margin: 20px auto;
+    }
+  </style>
+
+  <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    // Для определения темы
+    const schemeThemes = {
+      "bright_light": "light",
+      "vkcom_light": "light",
+      "space_gray": "dark",
+      "vkcom_dark": "dark",
+    }
+    vkBridge.subscribe(({ detail: { type, data } }) => {
+      if (type === 'VKWebAppUpdateConfig') {
+        if (data.scheme in schemeThemes) {
+          document.documentElement.classList.remove("light", "dark")
+          document.documentElement.classList.add(schemeThemes[data.scheme])
+        }
+      }
+    });
+
+    // Инициализация приложения
+    vkBridge.send("VKWebAppInit");
+
+    vkBridge.send('VKWebAppGetUserInfo').then(fetchedUser => {
+      document.getElementById("fetchedUser").innerText = `${fetchedUser.first_name} ${fetchedUser.last_name}`
+    })
+  </script>
+</head>
+
+<body>
+  <header>Persik</header>
+  <main>
+
+    <article id="persik">
+      <header>
+        <a href="#">
+          <svg only-ios viewBox="0 0 20 28" width="20" height="28">
+            <use xlink:href="#chevron_back_28" style="fill: currentColor;"></use>
+          </svg>
+          <svg only-android viewBox="0 0 28 28" width="28" height="28">
+            <use xlink:href="#arrow_left_outline_28" style="fill: currentColor;"></use>
+          </svg>
+        </a>
+        Persik
+      </header>
+      <section>
+        <img class="Persik" src="https://vk.com/sticker/1-71-512" alt="Persik The Cat" />
+      </section>
+    </article>
+
+    <article>
+      <header>Example</header>
+      <section>
+        <h3>User Data Fetched with VK Bridge</h3>
+        <p id="fetchedUser">Loading...</p>
+      </section>
+
+      <section>
+        <h3>Navigation Example</h3>
+        <p><a href="#persik">Show me the Persik, please</a></p>
+      </section>
+    </article>
+
+  </main>
+
+  <!-- Иконки -->
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    style="position: absolute; width: 0; height: 0" aria-hidden="true" id="__SVG_SPRITE_NODE__">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 28" id="chevron_back_28">
+      <g fill="none" fill-rule="evenodd">
+        <path d="M0 0h20v28H0z"></path>
+        <path
+          d="M4.56 12.94L13 4.5a1.414 1.414 0 012 2L7.5 14l7.5 7.5a1.414 1.414 0 01-2 2l-8.44-8.44a1.5 1.5 0 010-2.12z"
+          fill="currentColor"></path>
+      </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" id="arrow_left_outline_28">
+      <g fill="none" fill-rule="evenodd">
+        <path d="M28 0H0v28h28z"></path>
+        <path
+          d="M12.293 6.293a1 1 0 011.414 1.414L8.414 13H22a1 1 0 01.993.883L23 14a1 1 0 01-1 1H8.414l5.293 5.293a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.414 0l-7-7-.073-.082A1.005 1.005 0 015 14l.004.09A1.006 1.006 0 015 14.02V14a1.02 1.02 0 01.125-.484.878.878 0 01.071-.111.999.999 0 01.097-.112l-.08.09c.025-.031.051-.062.08-.09z"
+          fill="currentColor" fill-rule="nonzero"></path>
+      </g>
+    </symbol>
+  </svg>
+</body>
+
+</html>

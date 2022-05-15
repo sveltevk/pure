@@ -1,4 +1,4 @@
-:root {
+:root:not(.light) {
   --vkui--theme_name: "vkBaseDark";
   --vkui--theme_name_base: "vkBase";
   --vkui--font_family_accent: "TT Commons", -apple-system, system-ui,
@@ -451,7 +451,7 @@
   --vkui--color_transparent--hover: rgba(255, 255, 255, 0.04);
   --vkui--color_transparent--active: rgba(255, 255, 255, 0.08);
 }
-:root {
+:root:not(.light) {
   --accent: #529ef4;
   --accent_alternate: #ffffff;
   --action_sheet_action_foreground: #ffffff;

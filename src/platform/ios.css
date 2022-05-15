@@ -7,3 +7,15 @@
     --panelheader_height: 52px;
   }
 }
+
+@supports (-webkit-touch-callout: none) {
+  *[only-android] {
+    display: none;
+  }
+}
+
+@supports not (-webkit-touch-callout: none) {
+  *[only-ios] {
+    display: none;
+  }
+}

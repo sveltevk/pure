@@ -9,6 +9,13 @@ layout: default
 [хака](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-touch-callout)
 в css.
 
+Для показа элементов на определенных платформах, можно использовать атрибуты `only-android` и `only-ios`
+
+```html
+<div only-android>Меня видно только на Android</div>
+<div only-ios>Меня видно только на iOS</div>
+```
+
 ## Темная тема
 
 Темная тема определяется автоматически, в зависимости от настроек системы.

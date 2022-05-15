@@ -30,3 +30,14 @@ main > article {
     display: none;
   }
 }
+
+aside > nav > a {
+  display: block;
+  padding: 12px;
+  color: var(--vkui--color_text_primary);
+  border-radius: 8px;
+}
+
+aside > nav > a:hover {
+  background: var(--background_hover);
+}

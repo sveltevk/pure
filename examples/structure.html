@@ -9,21 +9,30 @@
 </head>
 
 <body>
-  <header>@sveltevk/pure</header>
+  <header>Example</header>
   <main>
-    <aside>
-      <nav>
-        <a href="/">О модуле</a>
-        <a href="/docs/adaptivity">Адаптивность</a>
-        <a href="/docs/platforms">Платформы и темы</a>
-        <a href="/docs/mini-apps">VK mini apps</a>
-      </nav>
-    </aside>
-    <article>
+
+    <article id="panel-3">
+      <header>Panel 3</header>
       <section>
-        {{ content }}
+        <a href="#">to home</a>
       </section>
     </article>
+
+    <article id="panel-2">
+      <header>Panel 2</header>
+      <section>
+        <a href="#panel-3">to panel-3</a>
+      </section>
+    </article>
+
+    <article>
+      <header>Panel 1</header>
+      <section>
+        <a href="#panel-2">to panel-2</a>
+      </section>
+    </article>
+
   </main>
 </body>
 

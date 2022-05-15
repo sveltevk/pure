@@ -16,16 +16,16 @@ layout: default
 <script>
   // Для определения темы
   const schemeThemes = {
-    "bright_light": "light,
-    "vkcom_light": "light,
-    "space_gray": "dark,
-    "vkcom_dark": "dark,
-  }
-  vkBridge.subscribe(({ detail: { type, data }}) => {
-    if (type === 'VKWebAppUpdateConfig') {
+    bright_light: "light",
+    vkcom_light: "light",
+    space_gray: "dark",
+    vkcom_dark: "dark",
+  };
+  vkBridge.subscribe(({ detail: { type, data } }) => {
+    if (type === "VKWebAppUpdateConfig") {
       if (data.scheme in schemeThemes) {
-         document.documentElement.classList.remove("light", "dark")
-         document.documentElement.classList.add(schemeThemes[data.scheme])
+        document.documentElement.classList.remove("light", "dark");
+        document.documentElement.classList.add(schemeThemes[data.scheme]);
       }
     }
   });
@@ -34,3 +34,5 @@ layout: default
   vkBridge.send("VKWebAppInit");
 </script>
 ```
+
+Пример мини приложения [Персик](https://github.com/sveltevk/pure/blob/main/examples/persik.html).

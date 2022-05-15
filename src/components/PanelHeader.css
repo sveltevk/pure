@@ -21,6 +21,17 @@ main header {
   position: fixed;
 }
 
+header > a > svg {
+  display: block;
+  padding: 10px;
+  color: var(--header_tint);
+}
+
+header > a {
+  margin-right: 10px;
+  margin-left: calc(-1 * var(--vkui--size_base_padding_horizontal--regular));
+}
+
 /* REGULAR */
 @media (min-width: 768px) {
   header {
@@ -58,7 +69,12 @@ main header {
 /* Хак для определения Сафари на iOS https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-touch-callout */
 @supports (-webkit-touch-callout: none) {
   header {
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: 21px;
+  }
+  header > a {
+    position: absolute;
+    margin-left: 0;
+    left: 0;
   }
 }
