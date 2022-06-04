@@ -10,7 +10,7 @@
     height: 1px;
     background: currentColor;
     transform-origin: center top;
-    color: var(--separator_common);
+    color: var(--vkui--color_separator_primary);
     margin-top: 16px;
   }
 }
@@ -29,7 +29,8 @@
 
     background: var(--vkui--color_background_content);
     border-radius: 8px;
-    box-shadow: inset 0 0 0 var(--thin-border) var(--input_border);
+    box-shadow: inset 0 0 0 var(--thin-border)
+      var(--vkui--color_separator_secondary);
   }
   section + section {
     margin-top: 16px;
@@ -42,7 +43,7 @@
     height: 1px;
     background: currentColor;
     transform-origin: center top;
-    color: var(--separator_common);
+    color: var(--vkui--color_separator_primary);
     margin-top: 16px;
   }
 }

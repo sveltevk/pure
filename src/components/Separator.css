@@ -8,7 +8,7 @@ hr {
   height: 1px;
   background: currentColor;
   transform-origin: center top;
-  color: var(--separator_common);
+  color: var(--vkui--color_separator_primary);
   margin: 0 var(--vkui--size_base_padding_horizontal--regular);
 }
 

@@ -24,7 +24,7 @@ main header {
 header > a > svg {
   display: block;
   padding: 10px;
-  color: var(--header_tint);
+  color: var(--vkui--color_icon_accent);
 }
 
 header > a {
@@ -61,7 +61,7 @@ header > a {
     left: var(--vkui--size_base_padding_horizontal--regular);
     right: var(--vkui--size_base_padding_horizontal--regular);
     height: 1px;
-    background: var(--separator_common);
+    background: var(--vkui--color_separator_primary);
     transform-origin: center top;
   }
 }

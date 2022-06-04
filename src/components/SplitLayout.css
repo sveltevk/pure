@@ -36,8 +36,13 @@ aside > nav > a {
   padding: 12px;
   color: var(--vkui--color_text_primary);
   border-radius: 8px;
+  transition: background 0.15s ease-out;
 }
 
 aside > nav > a:hover {
-  background: var(--background_hover);
+  background: var(--vkui--color_transparent--hover);
+}
+
+aside > nav > a:active {
+  background: var(--vkui--color_transparent--active);
 }
