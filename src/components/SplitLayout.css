@@ -28,10 +28,11 @@ main > article {
   }
   aside {
     display: none;
+    width: 100%;
   }
 }
 
-aside > nav > a {
+nav > a {
   display: block;
   padding: 12px;
   color: var(--vkui--color_text_primary);
@@ -39,10 +40,10 @@ aside > nav > a {
   transition: background 0.15s ease-out;
 }
 
-aside > nav > a:hover {
+nav > a:hover {
   background: var(--vkui--color_transparent--hover);
 }
 
-aside > nav > a:active {
+nav > a:active {
   background: var(--vkui--color_transparent--active);
 }

@@ -13,13 +13,21 @@ article {
 }
 
 article[id],
-article:target ~ article {
+article:target ~ article,
+aside:target ~ article {
   display: none;
 }
 
 article:target,
 article[aria-expanded="true"] {
   display: block;
+}
+
+/* COMPACT */
+@media (max-width: 767px) {
+  aside:target {
+    display: block;
+  }
 }
 
 /* COMPACT */
