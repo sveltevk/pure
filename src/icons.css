@@ -1,0 +1,4 @@
+:root {
+  --vkui--icons--arrow_left_outline_28: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='none'%3E%3Cpath d='M13 7l-7 7 7 7m-7-7h16' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --vkui--icons--chevron_back_28: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28' fill='none'%3E%3Cpath d='M14 5.5l-8.5 8.5 8.5 8.5' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
