@@ -1,28 +1,6 @@
-.PanelHeaderBack {
-  width: 48px;
-  height: 48px;
-  margin: 0 12px 0 0;
-  border-radius: 50%;
-  transition: background-color 0.15s ease-out;
-}
-
 .PanelHeaderBack::before {
-  content: "";
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  background-color: var(--vkui--color_icon_accent);
-  -webkit-mask: var(--vkui--icons--arrow_left_outline_28) center / 28px
-    no-repeat;
-  mask: var(--vkui--icons--arrow_left_outline_28) center / 28px no-repeat;
-}
-
-.PanelHeaderBack:hover {
-  background-color: var(--vkui--color_transparent--hover);
-}
-
-.PanelHeaderBack:active {
-  background-color: var(--vkui--color_transparent--active);
+  -webkit-mask-image: var(--vkui--icons_arrow_left_outline_28);
+  mask-image: var(--vkui--icons_arrow_left_outline_28);
 }
 
 /* iOS */
@@ -30,17 +8,12 @@
   .PanelHeaderBack {
     width: 36px;
     height: 44px;
-    border-radius: 0;
-    transition: background-color 0.15s ease-out;
   }
 
   .PanelHeaderBack::before {
-    content: "";
-    position: absolute;
     width: 36px;
     height: 44px;
-    background-color: var(--vkui--color_icon_accent);
-    -webkit-mask: var(--vkui--icons--chevron_back_28) center / 20px no-repeat;
-    mask: var(--vkui--icons--chevron_back_28) center / 20px no-repeat;
+    -webkit-mask: var(--vkui--icons_chevron_back_28) center / 20px no-repeat;
+    mask: var(--vkui--icons_chevron_back_28) center / 20px no-repeat;
   }
 }

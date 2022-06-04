@@ -1,0 +1,4 @@
+.PanelHeaderMenu::before {
+  -webkit-mask-image: var(--vkui--icons_menu_28);
+  mask-image: var(--vkui--icons_menu_28);
+}

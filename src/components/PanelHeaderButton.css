@@ -1,0 +1,58 @@
+.PanelHeaderBack,
+.PanelHeaderMenu,
+.PanelHeaderButton {
+  width: 48px;
+  height: 48px;
+  margin: 0 12px 0 0;
+  border-radius: 50%;
+  transition: background-color 0.15s ease-out;
+}
+
+.PanelHeaderBack::before,
+.PanelHeaderMenu::before,
+.PanelHeaderButton::before {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: var(--vkui--color_icon_accent);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 28px;
+  mask-size: 28px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.PanelHeaderBack:hover,
+.PanelHeaderMenu:hover,
+.PanelHeaderButton:hover {
+  background-color: var(--vkui--color_transparent--hover);
+}
+
+.PanelHeaderBack:active,
+.PanelHeaderMenu:active,
+.PanelHeaderButton:active {
+  background-color: var(--vkui--color_transparent--active);
+}
+
+/* iOS */
+@supports (-webkit-touch-callout: none) {
+  .PanelHeaderBack,
+  .PanelHeaderMenu,
+  .PanelHeaderButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 0;
+    transition: background-color 0.15s ease-out;
+  }
+
+  PanelHeaderBack::before,
+  .PanelHeaderMenu::before,
+  .PanelHeaderButton::before {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 44px;
+  }
+}

@@ -9,4 +9,6 @@
 @import url(./Text.css);
 @import url(./Title.css);
 @import url(./View.css);
+@import url(./PanelHeaderButton.css);
+@import url(./PanelHeaderMenu.css);
 @import url(./PanelHeaderBack.css);
