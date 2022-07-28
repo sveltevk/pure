@@ -44,4 +44,3 @@ VKUI на чистом css с использованием html тегов.
 
 [MIT](LICENSE)
 
-test
